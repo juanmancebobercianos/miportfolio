@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio - Desarrollador Web</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="img/favicom.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="particles-js"></div>
+        <div class="hero">
+            <h1>Hola, soy <span class="highlight">Juan A. Mancebo</span></h1>
+            <p>Desarrollador Web Creativo y Pasional</p>
+            <a href="#projects" class="btn">Ver Proyectos</a>
+            <a href="#certificados" class="btn">Certificados</a>
+            <a href="ruta/a/mi/CV.pdf" class="btn" download>Descargar CV</a> <!-- Ajusta la ruta al CV -->
+            <a href="#contact" class="btn">Contactame</a> <!-- Botón de contacto -->
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Sobre Mí</h2>
+        <p>Desarrollo experiencias digitales innovadoras que inspiran y sorprenden. Este portafolio está dedicado a
+            presentar mis proyectos y habilidades, así como a explorar oportunidades de colaboración con empresas que
+            busquen transformar ideas en realidades impactantes.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="project-gallery">
+
+            <div class="project-item">
+                <h3>Portfolio</h3>
+                <p class="project-description">
+                    El Portfolio utiliza HTML, CSS y JavaScript para el desarrollo del front-end, lo que permite crear
+                    una interfaz atractiva y funcional. La estructura de archivos está organizada de manera que el
+                    contenido, los estilos y los scripts son fácilmente gestionables. Además, se integra Particles.js
+                    para animaciones de fondo, mejorando la experiencia visual. Responsive
+                </p>
+                <a href="https://estudiojuridico-seven.vercel.app/" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Nexatech.com.uy</h3>
+                <p class="project-description">
+                    El proyecto de Nexatech utiliza HTML, CSS, y JavaScript para el desarrollo front-end, y Node.js
+                    junto con Express y Nodemailer para el desarrollo back-end y la gestión de correos electrónicos. Se
+                    emplea una estructura organizada de archivos para facilitar el mantenimiento y escalabilidad del
+                    código. Responsive.
+                </p>
+                <a href="https://nexatech.com.uy/" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Cake & Co</h3>
+                <p class="project-description">
+                    Lenguajes y Tecnologías: HTML para la estructura de la página. CSS para el estilo visual y
+                    animaciones. JavaScript para la interactividad (sonidos y manejar el menú hamburguesa). Responsive.
+                </p>
+                <a href="https://cake-co-nu.vercel.app" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Estudio Jurídico y Notarial</h3>
+                <p class="project-description">
+                    Lenguajes y Tecnologías: HTML para la estructura de la página. CSS para el estilo visual y
+                    animaciones. JavaScript para la interactividad y control del menú. Responsive.
+                </p>
+                <a href="https://estudiojuridico-seven.vercel.app/" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Póximamente</h3>
+                <p class="project-description">
+                    ......
+                </p>
+                <a href="https://estudiojuridico-seven.vercel.app/" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Póximamente</h3>
+                <p class="project-description">
+                    ......
+                </p>
+                <a href="https://estudiojuridico-seven.vercel.app/" class="btn" target="_blank">Ver Más</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="certificados" class="certificados">
+        <h2>Certificados</h2>
+        <p>Aquí puedes encontrar algunos de mis certificados que avalan mi formación y experiencia en desarrollo web.
+        </p>
+        <ul class="certificates-gallery">
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert1.png')">
+                    <img src="img/Cert1.png" alt="Certificado 1">
+                </a>
+                <p>Desarrollo Web</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert2.png')">
+                    <img src="img/Cert2.png" alt="Certificado 2">
+                </a>
+                <p>JavaScript</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert3.png')">
+                    <img src="img/Cert3.png" alt="Certificado 3">
+                </a>
+                <p>React Js</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert4.jpeg')">
+                    <img src="img/Cert4.jpeg" alt="Certificado 4">
+                </a>
+                <p>Frontend React</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert5.jpeg')">
+                    <img src="img/Cert5.jpeg" alt="Certificado 5">
+                </a>
+                <p>Frontend React Flex</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert6.jpg')">
+                    <img src="img/Cert6.jpg" alt="Certificado 6">
+                </a>
+                <p>Programación Backend</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert7.jfif')">
+                    <img src="img/Cert7.jfif" alt="Certificado 7">
+                </a>
+                <p>Programación Full Stack</p>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="openModal('img/Cert8.jpg')">
+                    <img src="img/Cert8.jpg" alt="Certificado 8">
+                </a>
+                <p>EF SET Certificate</p>
+            </li>
+            
+        </ul>
+
+        <section id="contact" class="contact">
+            <h2>Contáctame</h2>
+            <p>Puedes contactarme a través de los siguientes medios:</p>
+            <ul>
+                <li>Email: <a href="mailto:juanandresmancebo1982@gmail.com">juanandresmancebo1982@gmail.com</a></li>
+                <li>Teléfono WhatsApp: <a href="https://wa.me/598099302406">(+598) 099 302 406</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/juanchi-mancebo-513676218" target="_blank">Juan
+                        Mancebo</a></li>
+            </ul>
+        </section>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+    </div>
+    </section>
+
+    <footer>
+        <div id="particles-js-footer"></div>
+        <div class="footer-content">
+            <p>"Transformando ideas en realidad".</p>
+            <p>&copy; 2025 Juan A. Mancebo.</p>
+        </div>
+    </footer>
+
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+
+        document.getElementById('closeModal').onclick = function () {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Cierra el modal si el usuario hace clic fuera de la imagen
+        window.onclick = function (event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        particlesJS.load('particles-js-footer', 'particles.json', function () {
+            console.log('callback - particles.js footer config loaded');
+        });
+    </script>
+
+</body>
+
+</html>

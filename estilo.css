@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f0f0;
+}
+
+header {
+    background: linear-gradient(135deg, #6E7DD8, #3A2E91);
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Tamaño grande para el encabezado */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Tamaño medio para la descripción */
+}
+
+.hero a.btn {
+    font-size: 1.2rem; /* Tamaño moderado para el botón */
+}
+
+.highlight {
+    font-weight: bold;
+    color: #FFDD00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #FFDD00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #000);
+}
+
+.about, .projects {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.projects {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+h2 {
+    margin: 30px 0;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #6E7DD8;
+    margin: 10px auto;
+    transition: width 0.3s ease;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background: #f9f9f9;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 0 1 calc(30% - 30px); /* Three items per row with margin */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #3A2E91;
+    color: white;
+}
+
+footer a {
+    color: #FFDD00;
+    text-decoration: underline;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.certificados {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9; /* Fondo claro para contraste */
+}
+
+.certificados ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.certificados li {
+    margin: 10px 0; /* Espaciado entre los elementos de la lista */
+}
+
+.certificates-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px; /* Espaciado entre las imágenes */
+    list-style: none;
+    padding: 0;
+}
+
+.certificates-gallery li {
+    text-align: center; /* Centraliza el texto */
+}
+
+.certificates-gallery img {
+    width: 100%;
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: transform 0.2s; /* Animación al hover */
+}
+
+.certificates-gallery img:hover {
+    transform: scale(1.10); /* Aumentar imagen en hover */
+}
+
+.certificates-gallery p {
+    margin-top: 5px; /* Espaciado entre la imagen y el texto */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed; /* Se queda en la misma posición en la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con algo de transparencia */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Ancho máximo de la imagen */
+}
+
+.close {
+    position: absolute; /* Posiciona el botón de cerrar */
+    top: 10px; /* Parte superior */
+    right: 25px; /* Lado derecho */
+    color: white; /* Color del texto */
+    font-size: 35px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    transition: 0.3s; /* Transición suave al pasar el cursor */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* Color al pasar el cursor */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia a cursor de mano */
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9; /* Fondo claro para contraste */
+}
+
+.contact ul {
+    list-style: none; /* Quitar viñetas de la lista */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact li {
+    margin: 10px 0; /* Espaciado entre elementos de la lista */
+}
+
+footer {
+    position: relative; /* Posiciona el footer */
+    padding: 20px 0; /* Espacio reducido en el pie de página */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+#particles-js-footer {
+    position: absolute; /* Posiciona las partículas por debajo del contenido */
+    left: 0;
+    right: 0;
+    top: -50%; /* Mueve las partículas hacia arriba */
+    bottom: 0; /* Asegura que ocupen hasta el fondo del footer */
+    z-index: 0; /* Asegura que las partículas estén detrás */
+}
+
+.footer-content {
+    position: relative; /* Mantiene el contenido del footer en su lugar */
+    z-index: 1; /* Asegura que el texto esté por encima de las partículas */
+    padding: 20px; /* Espaciado interno dentro del contenido */
+}
+
+footer h2,
+footer p {
+    margin: 10px 0; /* Espacio para los textos */
+}
+
+.project-gallery {
+    display: flex; /* Utiliza flexbox para la disposición horizontal */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+    justify-content: space-between; /* Espaciado igual entre los elementos */
+    margin: 0; /* Elimina el margen superior */
+    padding: 0; /* Elimina el padding superior */
+    list-style: none; /* Quita viñetas */
+}
+
+.project-item {
+    background: #fff; /* Fondo blanco para contraste */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra texto */
+    transition: transform 0.3s; /* Hover effect */
+    margin: 10px; /* Espaciado entre proyectos */
+    flex: 1 1 calc(30% - 20px); /* Tomar 30% del ancho con margen */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del width */
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al pasar el mouse */
+}
+
+.project-description {
+    font-weight: bold; /* Hace que el texto sea negrita */
+    font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #555; /* Color del texto */
+    margin: 10px 0; /* Espaciado en la parte superior e inferior */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Estilos generales para el header */
+header {
+    background: linear-gradient(135deg, #6E7DD8, #3A2E91);
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para h1 y párrafo */
+.hero h1 {
+    font-size: 4rem; /* Tamaño grande para el encabezado */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Tamaño medio para la descripción */
+}
+
+/* Estilo para los botones */
+.hero a.btn {
+    font-size: 1.2rem; /* Tamaño moderado para el botón */
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    header {
+        height: auto; /* Permitir que el header sea adaptado en altura */
+        padding: 20px; /* Espacio alrededor */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Reducir tamaño del texto en pantallas pequeñas */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Reducir tamaño del párrafo */
+    }
+
+    .hero a.btn {
+        font-size: 1rem; /* Reducir tamaño del botón */
+        padding: 10px 20px; /* Ajustar el área de clic */
+        margin: 5px 0; /* Espaciado vertical entre botones */
+        width: 80%; /* Botones ocupan el 80% del ancho */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    .hero h1 {
+        font-size: 2rem; /* Aumentar reducción del tamaño del texto */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Reducir aún más el tamaño del párrafo */
+    }
+
+    .hero a.btn {
+        padding: 8px 15px; /* Ajustar áreas de clic aún más */
+        font-size: 0.9rem; /* Hacer el texto del botón más pequeño */
+    }
+}
+
+/* Estilos generales para la sección "Sobre Mí" */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Tamaño del encabezado */
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem; /* Tamaño del texto del párrafo */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .about {
+        padding: 40px 10px; /* Reducir padding */
+    }
+
+    .about h2 {
+        font-size: 2rem; /* Reducir tamaño del encabezado */
+    }
+
+    .about p {
+        font-size: 1rem; /* Reducir tamaño del texto del párrafo */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    .about h2 {
+        font-size: 1.5rem; /* Reducir aún más el tamaño del encabezado */
+    }
+
+    .about p {
+        font-size: 0.9rem; /* Hacer el texto del párrafo más pequeño */
+    }
+}
+
+/* Estilos generales para la sección "Mis Proyectos" */
+.projects {
+    padding: 60px 20px; /* Espacios alrededor */
+}
+
+.projects h2 {
+    font-size: 2.5rem; /* Tamaño del encabezado */
+    margin-bottom: 20px;
+}
+
+/* Estilos para la galería de proyectos */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten y envuelvan */
+    justify-content: center; /* Centra los elementos en la pantalla */
+}
+
+.project-item {
+    background: #f9f9f9;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 1 1 calc(25% - 30px); /* Cuatro elementos por fila en pantallas grandes */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para el efecto hover */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    margin-bottom: 10px; /* Espacio debajo del título del proyecto */
+}
+
+.project-item .project-description {
+    font-size: 1rem; /* Tamaño del texto de la descripción */
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .project-item {
+        flex: 1 1 calc(50% - 30px); /* Dos elementos por fila */
+    }
+
+    .projects h2 {
+        font-size: 2rem; /* Tamaño del encabezado reducido */
+    }
+
+    .project-item .project-description {
+        font-size: 0.9rem; /* Reducir tamaño del texto de la descripción */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    .project-item {
+        flex: 1 1 100%; /* Un elemento por fila */
+    }
+
+    .projects h2 {
+        font-size: 1.5rem; /* Aun más pequeño el título */
+    }
+
+    .project-item .project-description {
+        font-size: 0.8rem; /* Hacer el texto aún más pequeño */
+    }
+}
+
+/* Estilos generales para la sección "Certificados" */
+.certificados {
+    padding: 60px 20px; /* Espacios alrededor */
+}
+
+.certificados h2 {
+    font-size: 2.5rem; /* Tamaño del encabezado */
+    margin-bottom: 20px;
+}
+
+.certificados p {
+    font-size: 1.2rem; /* Tamaño del texto del párrafo */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+/* Estilos para la galería de certificados */
+.certificates-gallery {
+    display: grid; /* Muestra los certificados en un grid */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsivo: múltiple columnas */
+    gap: 15px; /* Espacio entre los certificados */
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+}
+
+/* Estilos para cada certificado */
+.certificates-gallery li {
+    text-align: center; /* Centraliza el texto */
+}
+
+.certificates-gallery img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Altura automática para mantener proporciones */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: transform 0.2s; /* Animación al hover */
+}
+
+.certificates-gallery img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .certificados h2 {
+        font-size: 2rem; /* Reducir tamaño del encabezado */
+    }
+
+    .certificados p {
+        font-size: 1rem; /* Reducir tamaño del texto del párrafo */
+    }
+
+    .certificates-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Dos columnas en pantallas pequeñas */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    .certificados h2 {
+        font-size: 1.5rem; /* Aumentar reducción del tamaño del texto */
+    }
+
+    .certificados p {
+        font-size: 0.9rem; /* Hacer el texto del párrafo más pequeño */
+    }
+
+    .certificates-gallery {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
