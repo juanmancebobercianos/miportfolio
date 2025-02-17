@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background: #f0f0f0;
 }
 
+/* Estilos de sección */
 header {
     background: linear-gradient(135deg, #6E7DD8, #3A2E91);
     color: rgb(255, 255, 255);
@@ -28,21 +30,15 @@ header {
 }
 
 .hero h1 {
-    font-size: 4rem; /* Tamaño grande para el encabezado */
+    font-size: 4rem; /* Cambia según sea necesario */
 }
 
 .hero p {
-    font-size: 1.5rem; /* Tamaño medio para la descripción */
+    font-size: 1.5rem;
 }
 
 .hero a.btn {
-    font-size: 1.2rem; /* Tamaño moderado para el botón */
-}
-
-.highlight {
-    font-weight: bold;
-    color: #FFDD00;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
 }
 
 .btn {
@@ -75,6 +71,7 @@ header {
 }
 
 h2 {
+    font-size: 2.5rem; /* Generaliza tamaños */
     margin: 30px 0;
     position: relative;
 }
@@ -105,6 +102,7 @@ h2::after {
     flex: 0 1 calc(30% - 30px); /* Three items per row with margin */
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .project-item:hover {
     transform: translateY(-5px);
